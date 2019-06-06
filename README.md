@@ -40,75 +40,17 @@ First, clone the project by running:
 git clone --recursive https://github.com/alinionutpopa/dmhs.git
 ```
 
-You need to compile the modified Caffe library in this repository. Instructions for Ubuntu 14.04 are included below. You can also consult the generic [Caffe installation guide](http://caffe.berkeleyvision.org/installation.html) for further help.
+You need to compile the modified Caffe library in this repository. See http://caffe.berkeleyvision.org/installation.html for the latest installation instructions.
 
-
-### 1.1 Install dependencies
-##### General dependencies
-```
-sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
-sudo apt-get install --no-install-recommends libboost-all-dev
-```
-
-##### CUDA (optional - needed only if you are planning to use a GPU for faster processing)
-Install the correct CUDA driver and its SDK. Download CUDA SDK from Nvidia website. 
-
-You might need to blacklist some modules so that they do not interfere with the driver installation. You also need to uninstall your default Nvidia Driver first.
-```
-sudo apt-get install freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libgl1-mesa-glx libglu1-mesa libglu1-mesa-dev
-``` 
-Open /etc/modprobe.d/blacklist.conf and add:
-```
-blacklist amd76x_edac
-blacklist vga16fb
-blacklist nouveau
-blacklist rivafb
-blacklist nvidiafb
-blacklist rivatv
-```
-```
-sudo apt-get remove --purge nvidia*
-```
-
-When you restart your PC, before loging in, try "Ctrl + Alt + F1" to switch to a text-based login. Try:
-```
-sudo service lightdm stop
-chmod +x cuda*.run
-sudo ./cuda*.run
-```
-
-##### BLAS
-Install a BLAS library such as ATLAS, OpenBLAS or MKL. To install BLAS:
-```
-sudo apt-get install libatlas-base-dev 
-```
-
-##### Python 
-Install Anaconda Python distribution or install the default Python distribution with numpy, scipy, etc.
-
-##### MATLAB (optional - needed only if you are planning to use the MATLAB interface)
-Install MATLAB using a standard distribution.
-
-### 1.2 Build the custom Caffe version
-Set the path correctly in the ``Makefile.config``. You can rename the ``Makefile.config.example`` to ``Makefile.config``, as most common parts are filled already. You may need to change it a bit according to your environment.
-
-After this, in Ubuntu 16.04, try:
-```
-make -j16
-```
-
-If there are no error messages, you can then compile and install the Python and Matlab wrappers:
-To install the MATLAB wrapper (at the moment only for MATLAB versions prior to 2017):
-```
-make matcaffe
-```
+Check the users group in case you need help:
+https://groups.google.com/forum/#!forum/caffe-users
 
 
 All done! Try our method!
 
 
 ### 1.3 Run the demo
-First download the model that includes the trained weights from this [link](https://drive.google.com/open?id=0B2xD_tIOYyL1RlFhVGg4Y0VXYlk) into the ``data/model`` folder. Also, change the ``caffepath`` variable from ``code/config_release.m`` file accordingly.
+First download the model that includes the trained weights from this [link](https://drive.google.com/open?id=1bYgGzr-ha1mjT_uNLIMKb-ExcBHRVN5x) into the ``data/model`` folder. Also, change the ``caffepath`` variable from ``code/config_release.m`` file accordingly.
 
 The MATLAB script for running the demo is ``demoMubyNet.m``.
 
