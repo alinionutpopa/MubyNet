@@ -8,13 +8,13 @@ By using the software, you are agreeing to the terms of the [license agreement](
 
 Our software is built on top of the [Caffe](http://caffe.berkeleyvision.org/) deep learning library. The current version was developed by:
 
-[Andrei Zanfir](http://www.maths.lth.se/sminchisescu/research/profile/35/andrei-zanfir)
+[Andrei Zanfir](https://scholar.google.ro/citations?user=8lmzWycAAAAJ&hl=en&oi=ao)
 ,
-[Elisabeta Marinoiu](http://www.maths.lth.se/sminchisescu/research/profile/34/elisabeta-marinoiu)
+[Elisabeta Marinoiu](https://scholar.google.ro/citations?user=ssHUPeUAAAAJ&hl=en&oi=ao)
 ,
-[Mihai Zanfir](http://www.maths.lth.se/sminchisescu/research/profile/36/mihai-zanfir)
+[Mihai Zanfir](https://scholar.google.ro/citations?user=af68sKkAAAAJ&hl=en&oi=ao)
 ,
-[Alin-Ionut Popa](http://www.maths.lth.se/sminchisescu/research/profile/33/alin-ionut-popa)
+[Alin-Ionut Popa](https://scholar.google.ro/citations?user=HmFCNrsAAAAJ&hl=en&oi=ao)
 and
 [Cristian Sminchisescu](http://www.maths.lth.se/matematiklth/personal/sminchis/index.html)
 
