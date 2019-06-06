@@ -38,7 +38,7 @@ If you use this code/model for your research, please cite the following paper:
 ## Installation Guide
 First, clone the project by running:
 ```
-git clone --recursive https://github.com/alinionutpopa/dmhs.git
+git clone --recursive https://github.com/alinionutpopa/MubyNet.git
 ```
 
 You need to compile the modified Caffe library in this repository. See http://caffe.berkeleyvision.org/installation.html for the latest installation instructions.
@@ -53,11 +53,10 @@ All done! Try our method!
 ### 1.3 Run the demo
 First download the model that includes the trained weights from this [link](https://drive.google.com/open?id=1bYgGzr-ha1mjT_uNLIMKb-ExcBHRVN5x) into the ``data/model`` folder. Also, change the ``caffepath`` variable from ``code/config_release.m`` file accordingly.
 
-The MATLAB script for running the demo is ``demoMubyNet.m``.
+The MATLAB script for running the demo is ``demoMubyNet.m``. Please note that the shape estimation module will be made available at a later time.
 
 Contact: <andrei.zanfir@imar.ro>, <elisabeta.marinoiu@imar.ro>, <mihai.zanfir@imar.ro>, <alin.popa@imar.ro>, <cristian.sminchisescu@math.lth.se>
 
 
 ### Acknowledgments
-This work was supported in part by the
-European Research Council Consolidator grant SEED, CNCS-UEFISCDI (PN-III-P4-ID-PCE-2016-0535, PN-III-P4-ID-PCCF-2016-0180), the EU Horizon 2020 grant DE-ENIGMA (688835), and SSF.
+This work was supported in part by the European Research Council Consolidator grant SEED, CNCS-UEFISCDI (PN-III-P4-ID-PCE-2016-0535, PN-III-P4-ID-PCCF-2016-0180), the EU Horizon 2020 grant DE-ENIGMA (688835), and SSF.
