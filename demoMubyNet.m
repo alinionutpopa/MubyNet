@@ -28,9 +28,6 @@ end
 %% path setup
 
 close all;
-% addpath('src');
-% addpath('util');
-% addpath('util/ojwoodford-export_fig-5735e6d/');
 addpath('code');
 try
     caffe.reset_all();
@@ -43,7 +40,6 @@ img = imresize(img, [300, NaN]);
 %% 2d/3d/grouping network
 
 mode = 1;
-% param = config_release(mode, 230000, 1, '/home/eli/multipeople3d/external/caffe_train-master_2//matlab');
 param = config_release(mode, 230000, 1, './caffe-master/matlab');
 net_sampling = caffe.Net(param.model.deployFile, param.model.caffemodel, 'test');
 mode = 2;
