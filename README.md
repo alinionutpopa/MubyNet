@@ -18,9 +18,10 @@ Our software is built on top of the [Caffe](http://caffe.berkeleyvision.org/) de
 and
 [Cristian Sminchisescu](http://www.maths.lth.se/matematiklth/personal/sminchis/index.html)
 
-We provide a deep multitask architecture for fully automatic 2d and 3d human sensing (DMHS), including recognition and reconstruction, in monocular images. The system computes the figure-ground segmentation, semantically identifies the human body parts at pixel level, and estimates the 2d and 3d pose of the person. This software allows you to test our algorithm on your own images.
+Our model identifies human body structures (joints and limbs) in images, groups them based on 2d and 3d information fused using learned scoring functions, and optimally aggregates such responses into partial or complete 3d human skeleton hypotheses under kinematic tree constraints, but without knowing in advance the number of people in the scene and their visibility relations. We design a multi-task deep neural network with differentiable stages where the person grouping problem is formulated as an integer program based on learned body part scores parameterized by both 2d and 3d information. This avoids suboptimality resulting from separate 2d and 3d reasoning, with grouping performed based on the combined representation.
 
-
+![sample1](fig/19_full.png)
+![sample2](fig/59_full.png)
 
 If you use this code/model for your research, please cite the following paper:
 ```
