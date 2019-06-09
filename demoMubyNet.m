@@ -1,10 +1,10 @@
-function [J3D, limbs2d] = demoMubyNet(img_path, output_name)
+function [J3D] = demoMubyNet(img_path, output_name)
 
 % demoMubyNet - apply MubyNet CNN model on a single image
-% [pose3D] = demoMubyNet(img_path, output_name)
+% [J3D] = demoMubyNet(img_path, output_name)
 %
 % OUTPUT :
-% pose3D           - array containing the corresponding 3D pose
+% J3D              - array containing the corresponding 3D pose
 %                    predictions for the determined number of 
 %                    persons (npx17x3)
 
@@ -117,7 +117,6 @@ for k = 1 : np
         continue;
     end
     J3D = squeeze(limbs3d(k, :, :))';
-%     J3D = squeeze(stats.x3d(k, :, :));
     plotSkel(J3D*1000 + repmat(T(k, :), [17 1]) * 1000, 'b*');
     axis image
     axis equal
