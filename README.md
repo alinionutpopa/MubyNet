@@ -41,7 +41,7 @@ First, clone the project by running:
 git clone --recursive https://github.com/alinionutpopa/MubyNet.git
 ```
 
-You need to compile the modified Caffe library in this repository. See http://caffe.berkeleyvision.org/installation.html for the latest installation instructions.
+You need to compile the Caffe library in this repository. See http://caffe.berkeleyvision.org/installation.html for the latest installation instructions.
 
 Check the users group in case you need help:
 https://groups.google.com/forum/#!forum/caffe-users
