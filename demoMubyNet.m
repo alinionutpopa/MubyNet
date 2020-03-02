@@ -5,7 +5,7 @@ function [J3D, limbs2d] = demoMubyNet(img_path, output_name)
 %
 % OUTPUT :
 % pose3D           - array containing the corresponding 3D pose
-%                    predictions for the determined number of 
+%                    predictions for the determined number of
 %                    persons (npx17x3)
 
 %
@@ -40,10 +40,10 @@ img = imresize(img, [300, NaN]);
 %% 2d/3d/grouping network
 
 mode = 1;
-param = config_release(mode, 230000, 1, './caffe-master/matlab');
+param = config_release(mode, 230000, 0, '/home/teosz/caffe/matlab');
 net_sampling = caffe.Net(param.model.deployFile, param.model.caffemodel, 'test');
 mode = 2;
-param = config_release(mode, 230000, 1, './caffe-master/matlab');
+param = config_release(mode, 230000, 0, '/home/teosz/caffe/matlab');
 net_scoring = caffe.Net(param.model.deployFile, param.model.caffemodel, 'test');
 %% sampling and grouping
 
@@ -70,7 +70,7 @@ for i = 1:np
         end
     end
 end
-    
+
 %% non-max suppression and draw
 
 figure,
@@ -85,7 +85,7 @@ for i = 1:18
     end
 end
 
-%% translation inference 
+%% translation inference
 
 [h, w, ~] = size(img);
 cx = w/2;
