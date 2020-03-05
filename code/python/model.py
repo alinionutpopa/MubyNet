@@ -24,7 +24,7 @@ class (Network):
              .conv(1, 1, 512, 1, 1, name='conv5_4_CPM_L2')
              .conv(1, 1, 19, 1, 1, relu=False, name='conv5_5_CPM_L2'))
 
-        (self.feed('conv5_5_CPM_L2', 
+        (self.feed('conv5_5_CPM_L2',
                    'conv4_4_CPM')
              .concat(3, name='concat_stage2_H36M')
              .conv(7, 7, 128, 1, 1, name='Mconv1_stage2_L2_H36M')
@@ -35,7 +35,7 @@ class (Network):
              .conv(1, 1, 128, 1, 1, name='Mconv6_stage2_L2_H36M')
              .conv(1, 1, 19, 1, 1, relu=False, name='Mconv7_stage2_L2_H36M'))
 
-        (self.feed('Mconv7_stage2_L2_H36M', 
+        (self.feed('Mconv7_stage2_L2_H36M',
                    'conv4_4_CPM')
              .concat(3, name='concat_stage3_H36M')
              .conv(7, 7, 128, 1, 1, name='Mconv1_stage3_L2_H36M')
@@ -46,7 +46,7 @@ class (Network):
              .conv(1, 1, 128, 1, 1, name='Mconv6_stage3_L2_H36M')
              .conv(1, 1, 19, 1, 1, relu=False, name='Mconv7_stage3_L2_H36M'))
 
-        (self.feed('Mconv7_stage3_L2_H36M', 
+        (self.feed('Mconv7_stage3_L2_H36M',
                    'conv4_4_CPM')
              .concat(3, name='concat_stage4_H36M')
              .conv(7, 7, 128, 1, 1, name='Mconv1_stage4_L2_H36M')
@@ -57,7 +57,7 @@ class (Network):
              .conv(1, 1, 128, 1, 1, name='Mconv6_stage4_L2_H36M')
              .conv(1, 1, 19, 1, 1, relu=False, name='Mconv7_stage4_L2_H36M'))
 
-        (self.feed('Mconv7_stage4_L2_H36M', 
+        (self.feed('Mconv7_stage4_L2_H36M',
                    'conv4_4_CPM')
              .concat(3, name='concat_stage5_H36M')
              .conv(7, 7, 128, 1, 1, name='Mconv1_stage5_L2_H36M')
@@ -68,7 +68,7 @@ class (Network):
              .conv(1, 1, 128, 1, 1, name='Mconv6_stage5_L2_H36M')
              .conv(1, 1, 19, 1, 1, relu=False, name='Mconv7_stage5_L2_H36M'))
 
-        (self.feed('Mconv7_stage5_L2_H36M', 
+        (self.feed('Mconv7_stage5_L2_H36M',
                    'conv4_4_CPM')
              .concat(3, name='concat_stage6_H36M')
              .conv(7, 7, 128, 1, 1, name='Mconv1_stage6_L2_H36M')
@@ -79,7 +79,7 @@ class (Network):
              .conv(1, 1, 128, 1, 1, name='Mconv6_stage6_L2_H36M')
              .conv(1, 1, 19, 1, 1, relu=False, name='Mconv7_stage6_L2_H36M'))
 
-        (self.feed('Mconv7_stage6_L2_H36M', 
+        (self.feed('Mconv7_stage6_L2_H36M',
                    'conv4_4_CPM')
              .concat(3, name='concat_stage1_H36M_3D')
              .conv(3, 3, 128, 1, 1, name='conv5_1_CPM_L3')
@@ -88,8 +88,8 @@ class (Network):
              .conv(1, 1, 512, 1, 1, name='conv5_4_CPM_L3')
              .conv(1, 1, 48, 1, 1, relu=False, name='conv5_5_CPM_L3_H36M'))
 
-        (self.feed('Mconv7_stage6_L2_H36M', 
-                   'conv5_5_CPM_L3_H36M', 
+        (self.feed('Mconv7_stage6_L2_H36M',
+                   'conv5_5_CPM_L3_H36M',
                    'conv4_4_CPM')
              .concat(3, name='concat_stage2_H36M_3D')
              .conv(7, 7, 128, 1, 1, name='Mconv1_stage2_L3_H36M')
@@ -100,8 +100,8 @@ class (Network):
              .conv(1, 1, 128, 1, 1, name='Mconv6_stage2_L3_H36M')
              .conv(1, 1, 48, 1, 1, relu=False, name='Mconv7_stage2_L3_H36M'))
 
-        (self.feed('Mconv7_stage6_L2_H36M', 
-                   'Mconv7_stage2_L3_H36M', 
+        (self.feed('Mconv7_stage6_L2_H36M',
+                   'Mconv7_stage2_L3_H36M',
                    'conv4_4_CPM')
              .concat(3, name='concat_stage3_H36M_3D')
              .conv(7, 7, 128, 1, 1, name='Mconv1_stage3_L3_H36M')
@@ -112,8 +112,8 @@ class (Network):
              .conv(1, 1, 128, 1, 1, name='Mconv6_stage3_L3_H36M')
              .conv(1, 1, 48, 1, 1, relu=False, name='Mconv7_stage3_L3_H36M'))
 
-        (self.feed('Mconv7_stage6_L2_H36M', 
-                   'Mconv7_stage3_L3_H36M', 
+        (self.feed('Mconv7_stage6_L2_H36M',
+                   'Mconv7_stage3_L3_H36M',
                    'conv4_4_CPM')
              .concat(3, name='concat_stage4_H36M_3D')
              .conv(7, 7, 128, 1, 1, name='Mconv1_stage4_L3_H36M')
@@ -124,8 +124,8 @@ class (Network):
              .conv(1, 1, 128, 1, 1, name='Mconv6_stage4_L3_H36M')
              .conv(1, 1, 48, 1, 1, relu=False, name='Mconv7_stage4_L3_H36M'))
 
-        (self.feed('Mconv7_stage6_L2_H36M', 
-                   'Mconv7_stage4_L3_H36M', 
+        (self.feed('Mconv7_stage6_L2_H36M',
+                   'Mconv7_stage4_L3_H36M',
                    'conv4_4_CPM')
              .concat(3, name='concat_stage5_H36M_3D')
              .conv(7, 7, 128, 1, 1, name='Mconv1_stage5_L3_H36M')
@@ -136,8 +136,8 @@ class (Network):
              .conv(1, 1, 128, 1, 1, relu=False, name='Mconv6_stage5_L3_H36M')
              .conv(1, 1, 48, 1, 1, relu=False, name='Mconv7_stage5_L3_H36M'))
 
-        (self.feed('Mconv7_stage6_L2_H36M', 
-                   'Mconv7_stage5_L3_H36M', 
+        (self.feed('Mconv7_stage6_L2_H36M',
+                   'Mconv7_stage5_L3_H36M',
                    'conv4_4_CPM')
              .concat(3, name='concat_stage6_H36M_3D')
              .conv(7, 7, 128, 1, 1, name='Mconv1_stage6_L3_H36M')
@@ -148,10 +148,19 @@ class (Network):
              .conv(1, 1, 128, 1, 1, name='Mconv6_stage6_L3_H36M')
              .conv(1, 1, 48, 1, 1, relu=False, name='Mconv7_stage6_L3_H36M'))
 
-        (self.feed('Mconv7_stage6_L3_H36M', 
-                   'Mconv7_stage5_L3_H36M', 
-                   'Mconv7_stage4_L3_H36M', 
-                   'Mconv7_stage3_L3_H36M', 
-                   'Mconv7_stage2_L3_H36M', 
+        (self.feed('Mconv7_stage6_L3_H36M',
+                   'Mconv7_stage5_L3_H36M',
+                   'Mconv7_stage4_L3_H36M',
+                   'Mconv7_stage3_L3_H36M',
+                   'Mconv7_stage2_L3_H36M',
                    'conv5_5_CPM_L3_H36M')
              .add(name='sum_stage6'))
+
+        # Second branch
+        (self.feed('geomXY',
+                   'final_L2_scaled',
+                   'final_map',
+                   'conv4_4_CPM')
+             .concat(3, name='concat_stage1_FM')
+             .conv(3, 3, 256, 1, 1, name='conv1_FM')
+             .conv(3, 3, 128, 1, 1, name='conv2_FM'))
